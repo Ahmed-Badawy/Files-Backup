@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+body{
+	background:black;
+   	font-size: 400%;
+   	margin-left:200px;
+}
+
+.blur {
+   color: transparent;
+   text-shadow: 0 0 9px rgba(255,255,255,0.7);
+   transition : all 1s; 
+}
+.blur:hover{
+	color:white;
+}
+
+.blur-light {
+   color:yellow;
+   text-shadow: 0 0 9px rgba(255,255,0,0.8);
+	transition : all 1s; 
+}
+.blur-light:hover{
+	text-shadow:none;
+}
+
+	</style>
+</head>
+<body>
+	<h1 class="blur">Blured: hover to visible</h1>	
+	<h1 class="blur-light">Light: hover to visible</h1>	
+</body>
+</html>
