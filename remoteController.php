@@ -5,7 +5,6 @@ $zipper = new ZipperClass();
 
 
 
-
 $dir = __dir__;
 $output = strstr ($dir,"public_html",true);
 $search_dir = $output."public_html";
@@ -13,8 +12,10 @@ $search_dir = $output."public_html";
 //die($search_dir);
 
 $post = $_POST;
-//echo "<pre>"; var_export($post);die;
-foreach($post['backup_dirs'] as $cur_dir) $zipper->add_dir($search_dir."/".$cur_dir);
+
+$backup_dirs = explode(",",$post['backup_dirs']); 
+echo "<pre>"; var_export($backup_dirs);die;
+foreach($backup_dirs as $cur_dir) $zipper->add_dir($search_dir."/".$cur_dir);
 
 
 
